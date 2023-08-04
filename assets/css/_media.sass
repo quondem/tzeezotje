@@ -1,0 +1,143 @@
+@media (max-width:  1280px)
+    .times
+        &__img
+            width: 550px
+
+@media (max-width:  1100px)
+    .header
+        justify-content: space-between
+        &__logo
+            margin-right: 0
+            &.active
+                display: none
+        &__nav
+            display: none
+            padding: 120px 0 0 30px
+            position: fixed
+            flex-direction: column
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: #fff
+            &.active
+                display: block
+        &__item
+            margin-bottom: 20px
+            color: #000
+        &__info
+            margin-left: 0
+            color: #000
+        &__list
+            display: inline-block
+            flex-direction: column
+        &__item
+            margin-right: 0
+        &__burger
+            cursor: pointer
+            display: block
+            width: 40px
+            height: 30px
+            position: relative
+            margin-left: auto
+            & span
+                background-color: #fff
+                position: absolute
+                width: 100%
+                height: 3px
+                left: 0
+                top: 14px
+                transition: all 0.3s ease
+            &::before,&::after
+                content: ''
+                background-color: #fff
+                position: absolute
+                width: 100%
+                height: 3px
+                left: 0
+                transition: all 0.3s ease
+            &::before
+                top: 0
+            &::after
+                bottom: 0
+            &.active
+                z-index: 100
+                &::before,&::after
+                    background-color: #000
+                &::before
+                    transform: rotate(45deg)
+                    top: 14px
+                &::after
+                    transform: rotate(-45deg)
+                    bottom: 13px
+                & span
+                    transform: scale(0)
+    .times
+        &__cover
+            align-items: center
+            flex-direction: column
+    .swiper
+        &-btn
+            top: 0
+            transform: translateY(0)
+
+@media (max-width:  768px)
+    .info
+        &__open
+            font-size: 20px
+            line-height: 24px
+        &__title
+            font-size: 50px
+            line-height: 70px
+        &__wrapper
+            flex-direction: column
+            align-items: flex-start
+        &__circles
+            margin-top: 40px
+
+@media (max-width:  620px)
+    .times
+        &__wrapper
+            width: 100%
+        &__img
+            display: none
+        &__title
+            font-size: 20px
+            line-height: 26px
+        &__text
+            font-size: 14px
+            line-height: 26px
+
+@media (max-width:  480px)
+    .top
+        height: 850px
+    .header
+        &__logo
+            max-width: 200px
+    .info
+        margin-top: 60px
+        &__open
+            font-size: 18px
+            line-height: 20px
+        &__title
+            font-size: 46px
+            line-height: 60px
+        &__circles
+            display: none
+    .times
+        &__circle
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                display: none
+
+@media (max-width:  420px)
+    .times
+        &__text
+            margin-right: 0
+        &__info
+            display: inline-flex
+            flex-direction: column
+            align-items: flex-start
+        &__circle
+            margin: 10px auto

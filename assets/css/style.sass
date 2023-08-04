@@ -1,0 +1,249 @@
+@import './global'
+@import './reset'
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap')
+
+.top
+  width: 100%
+  position: relative
+  height: 901px
+  &__bg
+    height: 100%
+    position: absolute
+    object-fit: cover
+    width: 100%
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+.header
+  height: 165px
+  display: flex
+  align-items: center
+  &__nav
+    display: flex
+    width: 100%
+  &__list
+    display: flex
+  &__link
+    &:hover
+      border-bottom: 1px solid #fff
+  &__logo
+    margin-right: 130px
+  &__item
+    margin-right: 45px
+    transition: all 0.3s ease
+    &:last-child
+      margin-right: 0
+  &__number
+    line-height: 24px
+    &:hover
+      border-bottom: 1px solid #fff
+  &__link
+    line-height: 24px
+  &__info
+    margin-left: auto
+    display: flex
+    align-items: center
+  &__phone
+    margin-right: 11px
+  &__burger
+    display: none
+.info
+  margin-top: 100px
+  &__open
+    font-size: 24px
+    font-weight: 500
+    letter-spacing: 1.44px
+    margin-bottom: 24px
+  &__title
+    font-size: 64px
+    font-weight: 700
+    line-height: 88px
+    margin-bottom: 40px
+  &__wrapper
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__reserve
+    font-size: 18px
+    font-weight: 500
+    line-height: 24px
+    background: #3A4574
+    width: 270px
+    height: 100px
+    transition: all 0.1s ease
+    &:hover
+      background-color: #1d2960
+  &__circles
+    display: flex
+    align-items: center
+  &__circle
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    border: 1px solid #FFF
+    margin-right: 25px
+    &:last-child
+      margin-right: 0
+.times
+  padding: 80px 0 90px 0
+  &__wrapper
+    display: inline-block
+    width: 470px
+  &__cover
+    display: flex
+    justify-content: space-between
+  &__item
+    color: #000
+    width: 100%
+    margin-bottom: 20px
+  &__title
+    display: block
+    font-size: 24px
+    font-weight: 600
+    margin-bottom: 10px
+  &__info
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    & span
+      margin-right: 12px
+      &:last-child
+        margin-right: 0
+  &__text
+    font-size: 18px
+  &__circle
+    width: 5px
+    height: 5px
+    background-color: #D3B47F
+    border-radius: 50%
+    margin-right: 12px
+  &__line
+    width: 100%
+    height: 1px
+    background-color: #E7E7E7
+.quotation
+  padding: 220px 0
+  background-color: #3A4574
+.swiper
+  &-slide
+    display: flex !important
+    flex-direction: column !important
+    align-items: center !important
+    &__info
+      display: inline-flex
+      flex-direction: column
+      align-items: center
+    &__title
+      text-align: center
+      margin-top: 34px
+      margin-bottom: 20px
+      color: #D3B47F
+      font-size: 36px
+      font-weight: 600
+      line-height: 40px
+    &__text
+      text-align: center
+      max-width: 785px
+      color: #FFF
+      line-height: 40px
+    &__author
+      text-align: center
+      margin-top: 40px
+      color: #D3B47F
+      font-size: 24px
+      font-weight: 600
+      line-height: 40px
+      letter-spacing: 5.88px
+  &-btn
+    position: absolute
+    top: 50%
+    width: 70px
+    height: 70px
+    z-index: 10000
+    transform: translateY(-50%)
+    &-next
+      right: 0
+    &-prev
+      left: 0
+  &-arrow-next
+    transform: rotate(180deg)
+
+.modal
+  transform: scale(0)
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.8)
+  top: 0
+  left: 0
+  transition: all 0.2s ease
+  &.open
+    transform: scale(1)
+  &__body
+    min-height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px 10px
+  &__form
+    &.success
+      display: none
+  &__success
+    display: none
+    &-text
+      font-size: 30px
+      line-height: 40px
+    &.active
+      display: block
+  &__content
+    background-color: #fff
+    color: #000
+    max-width: 800px
+    width: 100%
+    padding: 30px
+    border-radius: 10px
+  &__title
+    font-size: 32px
+    font-weight: 500
+    letter-spacing: 1.44px
+    margin-bottom: 15px
+    line-height: 48px
+  &__input
+    border: 1px solid black
+    border-radius: 20px
+    padding: 6px 10px
+    width: 100%
+    &.wrong
+      border: 1px solid red
+  &__label
+    font-size: 20px
+    font-weight: 500
+    line-height: 32px
+  &__item
+    margin-bottom: 10px
+  &__btn
+    margin-top: 30px
+    font-size: 18px
+    font-weight: 500
+    line-height: 24px
+    background: #3A4574
+    width: 150px
+    height: 50px
+    color: #fff
+    border-radius: 50px
+    transition: all 0.3s ease
+    &:hover
+      background-color: #601d1d
+    &.close
+      background-color: red
+      &:hover
+        background-color: #4f0d0d
+body.lock
+  overflow: hidden
+@import './media'
