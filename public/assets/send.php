@@ -30,8 +30,8 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Reserve';
-    $body = 'Reserve Table';
-    $body .= 'Date:' . $_POST['date'];
+    $body = 'Reserve Table<br/>';
+    $body .= 'Date:' . $_POST['date'] . '<br/>';
     $body .= 'Time:' . $_POST['time'];
     $mail->Body    = $body;
 

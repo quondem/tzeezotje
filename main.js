@@ -44,7 +44,7 @@ form.addEventListener('submit', async function (e) {
     e.preventDefault()
     let formData = new FormData(form)
     if (validateForm()) {
-        let response = await fetch('send.php',
+        let response = await fetch('assets/send.php',
             {
                 method: 'POST',
                 body: formData
@@ -53,8 +53,11 @@ form.addEventListener('submit', async function (e) {
             let result = await response
             form.classList.add('success')
             successText.classList.add('active')
+            console.log(result)
         } else {
             alert('Ошибка')
+            let result = await response
+            console.log(result)
         }
 
     }
